@@ -18,11 +18,12 @@ public class MonsterController
 		boolean hasBellyButton = false;
 		String name = "Dog";
 		
+		myOutput = new MarshmallowOutput();
 		alexMonster = new MarshmallowMonster(name, eyes, noses, hair, legs, hasBellyButton);
 	}
 	
 	public void start()
 	{
-		myOutput.displayMonsterInfo(alexMonster.toString());	
+		myOutput.displayMonsterInfo(alexMonster.toString());
 	}
 }

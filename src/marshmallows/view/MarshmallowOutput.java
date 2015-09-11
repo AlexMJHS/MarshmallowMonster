@@ -1,6 +1,6 @@
 package marshmallows.view;
 
-public class MarshamallowOutput
+public class MarshmallowOutput
 {
 	public void displayMonsterInfo(String info)
 	{
