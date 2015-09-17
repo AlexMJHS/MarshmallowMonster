@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class MonsterController
 {
 	private MarshmallowMonster alexMonster;
+	private MarshmallowMonster userMonster;
 	private MarshmallowOutput myOutput;
 	private Scanner monsterScanner;
 	
@@ -37,18 +38,53 @@ public class MonsterController
 		System.out.println("Type in a better name for the monster");
 		String betterMonsterName = monsterScanner.next();
 		alexMonster.setMonsterName(betterMonsterName);
+		
 		System.out.println("Type in a different number of eyes for the monster");
 		int betterMonsterEyes = monsterScanner.nextInt();
 		alexMonster.setMonsterEyes(betterMonsterEyes);
+		
 		System.out.println("Type in a different number of legs for the monster");
 		double betterMonsterLegs = monsterScanner.nextDouble();
 		alexMonster.setMonsterLegs(betterMonsterLegs);
+		
 		System.out.println("Type in a different amount of hair for the monster");
 		double betterMonsterHair = monsterScanner.nextDouble();
 		alexMonster.setMonsterHair(betterMonsterHair);
 	}
 	
-	
+	/**
+	 * This method will get the information to create an instance of a MarshmallowMonster.
+	 */
+	private void makeUserMonster()
+	{
+		//Step One: Get variables
+		String userName; //Declare a String type called userName.
+		int userEyes; //Declare an int type called userEyes.
+		int userNoseCount;
+		double userLegs;
+		double userHair;
+		double userLeg;
+		boolean userBellyButton;
+		
+		//Step two: Define variables by using Scanner to get user input.
+		System.out.println("Type in your name for your monster.");
+		userName = monsterScanner.next();
+		System.out.println("Type in the number of eyes for your monster.");
+		userEyes = monsterScanner.nextInt();
+		System.out.println("Type in the number of noses for this monster");
+		userNoseCount = monsterScanner.nextInt();
+		System.out.println("How much hair does your monster have?");
+		userHair = monsterScanner.nextDouble();
+		System.out.println("How many legs?");
+		userLeg = monsterScanner.nextDouble();
+		System.out.println("Does it have a bellybutton?");
+		userBellyButton = monsterScanner.nextBoolean();
+		
+		//Step three: Make a monster - use the Constructor! Remember that order of parameters matters!
+		userMonster = new MarshmallowMonster(userName, userEyes, userNoseCount, userHair, userLeg, userBellyButton);
+		
+		
+	}
 }
 
 
