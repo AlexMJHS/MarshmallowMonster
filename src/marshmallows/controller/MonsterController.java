@@ -28,9 +28,11 @@ public class MonsterController
 	
 	public void start()
 	{
-		myOutput.displayMonsterInfo(alexMonster.toString());
-		askQuestions();
-		myOutput.displayMonsterInfo("New Monster Info " + alexMonster.toString());
+		myOutput.displayMonsterConsole(alexMonster.toString());
+		myOutput.displayMonsterGUI(alexMonster.toString());
+		//this.makeUserMonster();
+		//myOutput.displayMonsterGUI("New Monster Info " + userMonster.toString());
+		myOutput.displayMonsterGUI1(alexMonster.toString());
 	}
 	
 	private void askQuestions()
@@ -63,7 +65,6 @@ public class MonsterController
 		int userNoseCount;
 		double userLegs;
 		double userHair;
-		double userLeg;
 		boolean userBellyButton;
 		
 		//Step two: Define variables by using Scanner to get user input.
@@ -76,12 +77,12 @@ public class MonsterController
 		System.out.println("How much hair does your monster have?");
 		userHair = monsterScanner.nextDouble();
 		System.out.println("How many legs?");
-		userLeg = monsterScanner.nextDouble();
+		userLegs = monsterScanner.nextDouble();
 		System.out.println("Does it have a bellybutton?");
 		userBellyButton = monsterScanner.nextBoolean();
 		
 		//Step three: Make a monster - use the Constructor! Remember that order of parameters matters!
-		userMonster = new MarshmallowMonster(userName, userEyes, userNoseCount, userHair, userLeg, userBellyButton);
+		userMonster = new MarshmallowMonster(userName, userEyes, userNoseCount, userHair, userLegs, userBellyButton);
 		
 		
 	}
