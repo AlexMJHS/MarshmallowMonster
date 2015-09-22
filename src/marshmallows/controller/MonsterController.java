@@ -33,6 +33,7 @@ public class MonsterController
 		//this.makeUserMonster();
 		//myOutput.displayMonsterGUI("New Monster Info " + userMonster.toString());
 		myOutput.displayMonsterGUI1(alexMonster.toString());
+		myOutput.displayMonsterGUI2(alexMonster.toString());
 	}
 	
 	private void askQuestions()

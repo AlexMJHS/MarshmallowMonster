@@ -18,4 +18,8 @@ public class MarshmallowOutput
 		JOptionPane.showMessageDialog(null, "How old is your monster?");
 		
 	}
+	public void displayMonsterGUI2(String info)
+	{
+		JOptionPane.showMessageDialog(null, "What color is your monster?");
+	}
 }
