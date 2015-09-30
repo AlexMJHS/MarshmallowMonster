@@ -13,11 +13,12 @@ public class MarshmallowOutput
 	{
 		JOptionPane.showMessageDialog(null, "My monster information is:" + info);
 	}	
+	
 	public void displayMonsterGUI1(String info)
 	{
 		JOptionPane.showMessageDialog(null, "How old is your monster?");
-		
 	}
+	
 	public void displayMonsterGUI2(String info)
 	{
 		JOptionPane.showMessageDialog(null, "What color is your monster?");
