@@ -84,8 +84,6 @@ public class MonsterController
 		
 		//Step three: Make a monster - use the Constructor! Remember that order of parameters matters!
 		userMonster = new MarshmallowMonster(userName, userEyes, userNoseCount, userHair, userLegs, userBellyButton);
-		
-		
 	}
 }
 

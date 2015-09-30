@@ -23,4 +23,11 @@ public class MarshmallowOutput
 	{
 		JOptionPane.showMessageDialog(null, "What color is your monster?");
 	}
+	
+	public String grabAnswer(String stuff)
+	{
+		String answer = "";
+		answer = JOptionPane.showInputDialog(null,stuff);
+		return answer;
+	}
 }
