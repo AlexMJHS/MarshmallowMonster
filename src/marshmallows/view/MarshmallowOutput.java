@@ -30,4 +30,27 @@ public class MarshmallowOutput
 		answer = JOptionPane.showInputDialog(null,stuff);
 		return answer;
 	}
-}
+	
+	public class PopupDisplay
+	{
+		/**
+		 * Displays the supplied text as a popup window.
+		 * @param wordsFromSomewhere The text to be displayed.
+		 */
+		public void showResponse(String wordsFromSomewhere)
+		{
+			JOptionPane.showMessageDialog(null, wordsFromSomewhere);
+		}
+
+		public String grabAnswer(String stuff)
+		{
+			String answer = "";
+			
+			answer = JOptionPane.showInputDialog(null, stuff);
+			
+			return answer;
+		}
+	}
+		
+
+

@@ -1,6 +1,5 @@
 package marshmallows.controller;
 
-
 import marshmallows.model.MarshmallowMonster;
 import marshmallows.view.MarshmallowOutput;
 import java.util.Scanner;
@@ -11,6 +10,8 @@ public class MonsterController
 	private MarshmallowMonster userMonster;
 	private MarshmallowOutput myOutput;
 	private Scanner monsterScanner;
+	private PopupDisplay myPopups;
+	
 	
 	public MonsterController()
 	{
@@ -34,7 +35,81 @@ public class MonsterController
 		//myOutput.displayMonsterGUI("New Monster Info " + userMonster.toString());
 		myOutput.displayMonsterGUI1(alexMonster.toString());
 		myOutput.displayMonsterGUI2(alexMonster.toString());
-	}
+
+		String monsterName = myPopups.grabAnswer("Type in a new name for your monster");
+		myPopups.showResponse("You typed in " + monsterName);
+		
+		String temp = myPopups.grabAnswer("Type in a new number of eyes");
+		int monsterEyes;
+		
+		if(isInteger(temp))
+		{
+			monsterEyes = Integer.parseInt(temp);
+		}
+		else
+		{
+			monsterEyes = -9999999;
+		}
+		
+		while(!isInteger(temp))
+		{
+			temp = myPopups.grabAnswer("Type in a positve integer for your monster's eyes");
+		}
+		
+		myPopups.showResponse("You typed " monsterEyes);
+		
+		String tempLegs = myPopups.grabAnswer("Type in a new number of legs for your monster");
+		double monsterLegs;
+		
+		while(!isDouble(tempLegs))
+		{
+			temp = myPopups.grabAnswer("Type in a positive integer for your monster's legs");
+		}
+		
+		if(isDouble(tempWeight))
+		{
+			monsterLegs = Double.parseDouble(tempWeight);
+		}
+		else
+		{
+			monsterLegs = -9999.99;
+		}
+		
+		myPopups.showResponse("You typed " + monsterLegs);
+		
+		myTestThing = new Thingy(monsterName, monsterEyes, monsterLegs);
+		{
+			boolean isInt = false;
+			
+			try
+			{
+				int temp = Integer.parseInt(input);
+				isInt = true;
+			}
+			catch(NumberFormatException error)
+			{
+				myPopups.showResponse("not an int - bad value will be used");
+			}
+			
+			return isInt;
+		}
+		
+		private boolean isDouble(String input)
+		{
+			boolean isDouble = false;
+			
+			try
+			{
+				double temp = Double.parseDouble(input);
+				isDouble = true;
+			}
+			catch(NumberFormatException error)
+			{
+				
+			}
+			return isDouble;
+		}
+	
 	
 	private void askQuestions()
 	{
